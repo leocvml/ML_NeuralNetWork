@@ -75,13 +75,12 @@ def test(weight,a,b,c):
   
     
 def sample():    
-    if __name__ == "__main__":
         neural_network = NeuralNetWork()
         print ("Random Starting synaptic weights : ")
         print (neural_network.synaptic_weights)
         train_set_input = array([[0,0,1],[1,1,1],[1,0,1],[0,1,1]])  #[[0,0,1],[1,1,1],[1,0,1],[0,1,1]]
         train_set_output = array([[0,1,1,0]]).T         #[[0,1,1,0]]
-        neural_network.train(train_set_input,train_set_output,10)
+        neural_network.train(train_set_input,train_set_output,10000)
         print ("new synaptic weights after training")
         print (neural_network.synaptic_weights)
         print ("Considering new situation[1,0] -> : ")
